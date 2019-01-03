@@ -1,0 +1,43 @@
+<p>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed1 = !isCollapsed1"
+            [attr.aria-expanded]="!isCollapsed1" aria-controls="one">
+            About the Application
+    </button>
+
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed2 = !isCollapsed2"
+    [attr.aria-expanded]="!isCollapsed2" aria-controls="two">
+How to use the App
+</button>
+
+  </p>
+  <div id="one" [ngbCollapse]="isCollapsed1">
+    <div class="card">
+      <div class="card-body">
+        <ul>
+          <li>
+              This is an internal Employee portal, this particular part of the app is meant to capture personal, contact and 
+              social media details.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="two" [ngbCollapse]="isCollapsed2">
+      <div class="card">
+        <div class="card-body">
+          <ul>
+            <li>
+                To create a new employee, click on the create employee tab
+            </li>
+          </ul>
+
+          <ul>
+              <li>
+                  To maintain an employee, manage employee tab
+              </li>
+            </ul>
+          
+        </div>
+      </div>
+    </div>
